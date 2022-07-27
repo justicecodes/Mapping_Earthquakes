@@ -12,7 +12,7 @@ let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/t
 });
 
 // Accessing the airport GeoJSON URL
-let airportData = "https://raw.githubusercontent.com/justicecodes/Mapping_Earthquakes/main/majorAirports.json";
+let airportData = "https://raw.githubusercontent.com/justicecodes/Mapping_Earthquakes/blob/main/earthquake_challenge/static/majorAirports.json";
 
 
 // Grabbing our GeoJSON data.
@@ -22,8 +22,6 @@ d3.json(airportData).then(function(data) {
   L.geoJSON(data).addTo(map);
 });
 
-// Create the map object with center and zoom level.
-let map = L.map('mapid').setView([30, 30], 2);
 
 // Get data from cities.js
 let cityData = cities; 
